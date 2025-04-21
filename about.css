@@ -3,6 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root {
+  --color-nav-bg: #212529;        /* $gray-900 */
+  --color-fondo-portada: #d63384; /* $pink-600 */
+  --color-tarjetas: #ffffff;      /* #fff */
+  --color-fondo-principal: #e9ecef; /* $gray-200 */
+}
+
+.bg-light {
+  background-color:var(--color-fondo-principal);
+}
 
 body {
     font-family: Arial, sans-serif;
@@ -10,65 +20,9 @@ body {
     padding: 0 1rem; 
 }
 
-figure img {
-    width: 100%;
-    height: auto; 
-    object-fit: cover;
-    border-radius: 10px; 
-}
-
-h1 {
-    font-size: 2rem; 
-    margin: 2rem 0;
-    text-align: center; 
-}
-
-.contenedor {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-}
-
-.contenedor p {
-    margin: 1rem auto;
-    max-width: 800px; 
-    text-align: justify; 
-    line-height: 1.8; 
-}
-
-.contentAbout {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 2rem;
-    gap: 2rem; 
-}
-
-.personalInfor {
-    display: flex;
-    flex-wrap: wrap; 
-    gap: 2rem; 
-    justify-content: center; 
-    margin: 2rem auto;
-    max-width: 1200px; 
-}
-
-.personalInfor div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 350px; 
-    text-align: center;
-}
-
-.personalInfor img {
-    width: 100%; 
-    max-width: 300px; 
-    height: auto; 
-    object-fit: cover; 
-    border-radius: 20px;
-    margin-bottom: 1rem;
+img {
+  max-height: 250px;
+  object-fit: cover;
 }
 
   
