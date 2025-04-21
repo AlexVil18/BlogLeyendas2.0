@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supersticiones Curiosas</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+
+  <main>
+    <figure>
+      <img src="https://png.pngtree.com/background/20210711/original/pngtree-scary-graveyard-in-the-woods---halloween-background-picture-image_1154763.jpg" alt="Imagen terror">
+    </figure>
+    <div class="contenedor">
+      <h1>¿QUIÉNES SOMOS?</h1>
+      <p>En Supersticiones Curiosas somos un equipo apasionado por los misterios, las creencias populares y esas pequeñas manías que atraviesan culturas y generaciones...</p>
+      <div class="contentAbout">
+        <h2>Acerca de nosotros</h2>
+        <section class="personalInfor">
+          <div>
+            <h2>Lizeth</h2>
+            <p>Amante de los misterios cotidianos...</p>
+          </div>
+          <img src="https://img.freepik.com/vector-gratis/pirata-chica-tesoro-capitana-pelo-rojo-sombrero-signo-calavera_107791-4822.jpg?ga=GA1.1.667733038.1743716234&semt=ais_hybrid&w=740" alt="Imagen creadora">
+        </section>
+        <section class="personalInfor">
+          <img src="https://static.vecteezy.com/system/resources/previews/002/391/122/large_2x/cute-halloween-banner-vector.jpg" alt="Imagen creador">
+          <div>
+            <h2>John</h2>
+            <p>John es el alma inquieta detrás de Supersticiones Curiosas...</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    fetch('nav.html').then(r => r.text()).then(d => {
+      document.getElementById('nav-placeholder').innerHTML = d;
+    });
+    fetch('footer.html').then(r => r.text()).then(d => {
+      document.getElementById('footer-placeholder').innerHTML = d;
+    });
+  </script>
+</body>
+</html>

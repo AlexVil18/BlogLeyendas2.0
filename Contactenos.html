@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contáctenos</title>
+  <link rel="stylesheet" href="contactenos.css">
+</head>
+<body>
+
+  
+  <div id="nav-placeholder"></div>
+
+  <h1>Contáctenos</h1>
+
+  <p>¿Tienes preguntas? Aquí puedes enviarnos un mensaje o escribirnos directamente.</p>
+
+  <div class="contenido-contacto">
+    <div class="info-contacto">
+      <h2>Información del grupo</h2>
+      <p>Correo general: contacto@proyecto-falso.com</p>
+      <p>Teléfono 1: +57 301 000 0001</p>
+      <p>Teléfono 2: +57 322 123 4567</p>
+      <p>También puedes llenar el siguiente formulario:</p>
+    </div>
+
+    <div class="formulario">
+      <form id="form-contacto">
+        <label>Nombre:</label><br>
+        <input type="text" id="nombre" required><br><br>
+
+        <label>Correo electrónico:</label><br>
+        <input type="email" id="correo" required><br><br>
+
+        <label>Mensaje:</label><br>
+        <textarea id="mensaje" rows="4" required></textarea><br><br>
+
+        <button type="submit">Enviar</button>
+      </form>
+      <p id="mensaje-confirmacion" style="display: none;">¡Informacion recibida, nos pondremos en contacto contigo en la brevedad posible!</p>
+    </div>
+  </div>
+
+  
+  <div id="footer-placeholder"></div>
+
+  <script>
+    
+    fetch('nav.html').then(r => r.text()).then(d => {
+      document.getElementById('nav-placeholder').innerHTML = d;
+    });
+    fetch('footer.html').then(r => r.text()).then(d => {
+      document.getElementById('footer-placeholder').innerHTML = d;
+    });
+   
+    document.getElementById('form-contacto').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('mensaje-confirmacion').style.display = 'block';
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
